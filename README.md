@@ -1,4 +1,6 @@
 - This project is my first project using react 18 for frontend and laravel 10 for backend...
+- Languages uses
+       - HTML CSS BOOTSTRAP JQUERY REACT SASS LARAVEL 
 - This project has two main parts..
 - They are User section and Admin session..
 - I used React for User Session and Laravel for Admin Session..
