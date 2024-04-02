@@ -17,4 +17,7 @@
      - Install npm and xmapp .
      - Open apache server and sql .
      - then run this commands   ' php artisan serve and  npm run dev '
+- if you have problems , visit to laravel official website https://laravel.com/docs/10.x/routing
+- if you have  problems in react with laravel 10 using vite , visit to https://dcodingsourcecode.darija-coding.com/tutorial/how-to-add-react-js-to-laravel-10-with-vite#google_vignette
+-  if you have  problems in jwt in laravel 10 , visit to https://blog.logrocket.com/implementing-jwt-authentication-laravel-10/
 - Good luck for your try.😊😊😊😊😊😊😊
