@@ -1,0 +1,81 @@
+
+.text {
+    padding-bottom: 200px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+.fason:hover{
+       cursor: pointer;
+}
+.password-input-container {
+    position: relative;
+}
+
+.password-input {
+    padding-right: 32px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+.toggle-password2 {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+    cursor: pointer;
+    z-index: 9999;
+}
+.toggle-password3 {
+    position: absolute;
+    top: 8px;
+    right: 35px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+li:active {
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 10px;
+  }
+  @media  screen and (min-width: 991px) {
+    .liTab:hover, .wI:hover {
+        border-radius: 10px;
+        transform: scale(1.4);
+      }
+
+  }
+  @media  screen and (max-width: 991px) {
+    .liTab:hover {
+        background-color: rgba(0, 0, 0, 0.356);
+        border-radius: 10px;
+      }
+      .wI:hover {
+        transform: scale(1.4);
+      }
+
+  }
+@media  screen and (min-width: 800px) {
+    .proImg {
+      margin-left: 50px;
+    }
+  }
+  @media  screen and (min-width: 1100px) {
+    .proImg {
+      margin-left: 70px;
+    }
+  }
+  @media  screen and (min-width: 1200px) {
+    .proImg {
+      margin-left: 95px;
+    }
+  }
+
+
