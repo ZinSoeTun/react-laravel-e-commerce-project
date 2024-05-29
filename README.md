@@ -12,8 +12,9 @@
        - You can't log in user sesson and admin session at once . (if logged in as a user, don't log in as a admin without logging out as a user and also for reverse..)
 - I used jwt token for user and laravel session for admin. ( adjust refresh token )
 - If you want to run this file,  you first
-     - Download this file .
+     - Download this file or git clone this repository .
      - Open this file on code editer as you like .
+     - type composer install
      - Install npm and xmapp .
      - Open apache server and sql .
      - then run this commands   ' php artisan serve and  npm run dev '
