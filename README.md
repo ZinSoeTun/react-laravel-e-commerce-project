@@ -15,7 +15,8 @@
      - Download this file or git clone this repository .
      - Open this file on code editer as you like .
      - Type composer install
-     - Run npm install axios@latest --save-dev
+     - If a patched version is released https://www.npmjs.com/package/axios ,
+           run npm install axios@latest --save-dev
      - Install npm and xmapp OR use your local environment .
      - Open apache server and sql  OR use other ways you like.
      - To check any vulnerabilities is existed or not please run npm audit
