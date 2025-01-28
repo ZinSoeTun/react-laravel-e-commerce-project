@@ -14,7 +14,13 @@
 - If you want to run this file,  you first
      - Download this file or git clone this repository .
      - Open this file on code editer as you like .
-     - Type composer install
+     - Type 'composer install'
+     - Type 'php artisan key:generate'
+     - Type 'php artisan storage:link'
+     - Type 'php artisan migrate'
+     - Type 'npm install or i vite'
+     - If any error found when 'npm install vite' run then type 'npm run audit'
+     - Type 'npm run dev'
      - If a patched version is released https://www.npmjs.com/package/axios ,
            run npm install axios@latest --save-dev
      - Install npm and xmapp OR use your local environment .
