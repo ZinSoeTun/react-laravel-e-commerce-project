@@ -6,7 +6,7 @@ const UnAuthenticatedRoute = () => {
     const cookies = new Cookies();
     const token = cookies.get('loginToken')
     return(
-        !token ? <Outlet/> : <Navigate to="/*"/>
+        !token ? <Outlet/> : <Navigate to="/"/>
     )
 }
 
