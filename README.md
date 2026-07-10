@@ -1,3 +1,6 @@
+![GitHub Contributors](https://img.shields.io/github/contributors/ZinSoeTun/laravel-real-estate-project)
+![GitHub Issues](https://img.shields.io/github/issues/ZinSoeTun/laravel-real-estate-project)
+
 - This project is my first project using react 18 for frontend and laravel 10 for backend...
 - Languages uses
        - HTML CSS BOOTSTRAP JQUERY REACT SASS LARAVEL 
@@ -27,6 +30,17 @@
      - Open apache server and sql  OR use other ways you like.
      - To check any vulnerabilities is existed or not please run npm audit
      - Then run this commands   ' php artisan serve and  npm run dev '
+ 
+## 🤝 Contributing
+
+We welcome contributors to help improve this project, especially with updating dependencies and fixing security vulnerabilities!
+
+### Guidelines:
+1. **Do not push directly to `main` branch.**
+2. Fork the repository and create your branch from `main`.
+3. If you are fixing security issues (like Vite, Laravel, or npm vulnerabilities), please ensure all tests pass.
+4. Open a **Pull Request (PR)** with a clear description of your changes.
+
 - If you have problems , visit to laravel official website https://laravel.com/docs/10.x/routing
 - If you have  problems in react with laravel 10 using vite , visit to https://dcodingsourcecode.darija-coding.com/tutorial/how-to-add-react-js-to-laravel-10-with-vite#google_vignette
 -  If you have  problems in jwt in laravel 10 , visit to https://blog.logrocket.com/implementing-jwt-authentication-laravel-10/
