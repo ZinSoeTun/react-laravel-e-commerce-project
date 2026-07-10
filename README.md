@@ -30,18 +30,22 @@
      - Open apache server and sql  OR use other ways you like.
      - To check any vulnerabilities is existed or not please run npm audit
      - Then run this commands   ' php artisan serve and  npm run dev '
- 
-## 🤝 Contributing
-
-We welcome contributors to help improve this project, especially with updating dependencies and fixing security vulnerabilities!
-
-### Guidelines:
-1. **Do not push directly to `main` branch.**
-2. Fork the repository and create your branch from `main`.
-3. If you are fixing security issues (like Vite, Laravel, or npm vulnerabilities), please ensure all tests pass.
-4. Open a **Pull Request (PR)** with a clear description of your changes.
-
 - If you have problems , visit to laravel official website https://laravel.com/docs/10.x/routing
 - If you have  problems in react with laravel 10 using vite , visit to https://dcodingsourcecode.darija-coding.com/tutorial/how-to-add-react-js-to-laravel-10-with-vite#google_vignette
 -  If you have  problems in jwt in laravel 10 , visit to https://blog.logrocket.com/implementing-jwt-authentication-laravel-10/
 - Good luck for your try.😊😊😊😊😊😊😊
+
+
+---
+
+## 🤝 Contributing & Open Source
+
+This project was built during my junior developer days, and I am now opening it up to the community to transform it into a high-quality, production-ready, real-world application! Whether you are a junior looking for portfolio experience or a seasoned dev, you are welcome to contribute.
+
+### How to Contribute:
+1. **Do not push directly to the `main` branch.** (Branch protection is enabled).
+2. Look at the open **Issues** to see what needs fixing or upgrading.
+3. Fork this repository and create your feature branch.
+4. Open a **Pull Request (PR)** with a clear description of your changes.
+
+Thank you for making this project better!
