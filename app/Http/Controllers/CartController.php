@@ -12,13 +12,16 @@ class CartController extends Controller
     //Add Cart function
     public  function AddCart(Request $request)
     {
-        // // logger($request->toArray());
-        // logger(Auth::user()->toArray());
+        $request->validate([
+            'productId' => 'required|integer|exists:products,id',
+        ]);
         try {
             if (Auth::user()) {
-                $existId =  Cart::where('product_id', $request->productId)->value('product_id');
-                // logger($existId);
-                if ($existId ==  $request->productId) {
+                //check only the authenticated user's own cart for duplicates
+                $alreadyInCart = Cart::where('user_id', Auth::user()->id)
+                    ->where('product_id', $request->productId)
+                    ->exists();
+                if ($alreadyInCart) {
                     return response()->json([
                         'status' => false,
                         'message' => 'Your product has already existed in your cart!',
@@ -38,7 +41,7 @@ class CartController extends Controller
                 }
             } else {
                 return response()->json([
-                    'status' => true,
+                    'status' => false,
                     'message' => 'You are not authenticated!',
                 ], 401);
             }
@@ -55,7 +58,6 @@ class CartController extends Controller
     //Cart data retrive from database
     public  function CartData()
     {
-        logger(Auth::user());
         try {
             if (Auth::user()) {
                 $data = Cart::where('carts.user_id', Auth::user()->id)
@@ -86,14 +88,12 @@ class CartController extends Controller
 
     public  function cartDelete(Request $request)
     {
-        // // logger($request->toArray());
-        // logger(Auth::user()->toArray());
         try {
             if (Auth::user()) {
                 Cart::where('carts.user_id', Auth::user()->id)->delete();
                     return response()->json([
                         'status' => true,
-                        'message' => 'Your product has been added to your cart!',
+                        'message' => 'Your cart has been cleared!',
                     ], 200);
                 }else{
                     return response()->json([
@@ -112,8 +112,6 @@ class CartController extends Controller
 
     public  function cartItemDelete($id)
     {
-        // // logger($request->toArray());
-        // logger(Auth::user()->toArray());
         try {
             if (Auth::user()) {
                 Cart::where('user_id', Auth::user()->id)
