@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\CardItem;
 use App\Models\Order;
-use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -66,23 +65,14 @@ class OrderController extends Controller
                 'orders.created_at as orderCreated_date'
             )
             ->leftJoin('orders', 'users.id', 'orders.user_id')
-            ->first();
+            ->firstOrFail();
 
-        $item = CardItem::where('card_items.user_id', $id)->get();
-        $newData = []; // Initialize an empty array
+        //ordered products with this user's own qty and total
+        $newData = CardItem::where('card_items.user_id', $id)
+            ->join('products', 'products.id', 'card_items.product_id')
+            ->select('products.*', 'card_items.qty as qty', 'card_items.total as total_price')
+            ->get();
 
-        foreach ($item as $item) {
-            // Fetch product data for each card item
-            $list = Product::where('products.id', $item->product_id)
-                ->select('products.*', 'card_items.qty as qty', 'card_items.total as total_price')
-                ->leftJoin('card_items', 'products.id', 'card_items.product_id')
-                ->first(); // Use first() instead of get()
-
-            // Add fetched product data to $data5 array
-            if ($data) {
-                $newData[] = $list;
-            }
-        }
         return view('admin.orderDetail', compact('data', 'newData'));
     }
       //order delete
